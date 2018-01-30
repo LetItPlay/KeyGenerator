@@ -130,6 +130,7 @@ namespace GethGenerator
                   string key = GenKey(password, g);
                   AddText("key:"+key + Environment.NewLine+"PAssword:"+password+Environment.NewLine);
                   Directory.Move("KeyStore\\" + g, "KeyStore\\" + key);
+                  File.AppendAllText("dlagrishi.txt", key+Environment.NewLine);
               }
           });
 
